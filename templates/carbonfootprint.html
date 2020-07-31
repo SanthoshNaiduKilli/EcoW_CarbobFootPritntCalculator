@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<style>
+html, body {
+display: block;
+justify-content: left;
+font-family: Roboto, Arial, sans-serif;
+  width: 1200px;
+  padding-left: 10px;
+
+font-size: 15px;
+ #background-image: url('/static/img/back.jpg');
+  background-color:#32CD32;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+form {
+border: 5px solid #f1f1f1;
+ background-color: #e6e6e6;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], [type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #0000A0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+.content {
+  margin: auto;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 24%;
+  margin-top: 6px;
+  white-space: nowrap;
+  font-weight:  bold;
+
+}
+
+.col-75 {
+  float: left;
+  width: 24%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 2%;
+  margin-top: 6px;
+  white-space: nowrap;
+  font-weight:  bold;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit], input[type=reset] {
+    width: 100%
+    margin-top: 0;
+
+  }
+}
+h1 {
+text-align: center;
+font-size: 15px;
+
+}
+h2 {
+color: #707070;
+text-align: left;
+font-size: 50px;
+}
+h3 {
+text-align: right;
+font-size: 15px;
+}
+ #plane{
+        position:relative;
+        top:0px;
+        background-repeat: no-repeat;
+        display:block;
+        color:#000000;
+        font-weight:bold;
+
+      }
+
+/* Popup container - can be anything you want */
+.myDIV {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.myDIV .popuptext {
+  visibility: hidden;
+  width: 860px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 25%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.myDIV .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.myDIV .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+<h3>
+<script> document.write(new Date()); </script></h3>
+  <div  style="overflow:hidden" id="plane"> To calculate Carbon emitted by different household items or two/four wheeler vehicle per person per day and educate people to carry out the Go Green measures.
+</div>
+
+ <h2>Carbon Footprint Calculator</h2>
+    <div id="myDIV"  class="myDIV"  style="font-weight: bold;padding-bottom:10px;">
+        <script>
+         var x = document.getElementById("myDIV");
+  var str = "tips";
+  var result = str.link("javascript:AlertIt();");
+  var y =  document.getElementById("myDIV");
+
+ if ( {{calculated_emission}}< 228.31){
+  x.style.color= "black";
+document.write('Hello {{name}} , your Carbon emission for today is '+{{calculated_emission}}+' Gram. Incredible, You are doing great!!');
+
+
+         } else {
+
+           x.style.color= "red";
+           document.write('Hello {{name}} , your Carbon emission for today is '+{{calculated_emission}}+' Gram. You have exceeded your daily limit , kindly follow these '+result+' for being energy efficient. ');
+
+        } </script>
+          <div class="popuptext" id="myPopup">
+              &nbsp; -->Switch lights off when you leave the room and unplug your electronic devices when they are not in use.
+          </br>    &nbsp;   -->Change incandescent light bulbs (which waste 90 percent of their energy as heat) to light emitting diodes (LEDs).
+</br>    &nbsp; -->Opt for a laptop instead of a desktop. Laptops require less energy to charge and operate than desktops.
+</br>  &nbsp;  -->Drive less. Walk, take public transportation, carpool, rideshare or cycle to your destination when possible. Buy an   &nbsp; &nbsp; &nbsp; &nbsp; electric car
+</br>   &nbsp;  -->Switch to sustainable, clean energy:Solar and wind power are just a few (though, by far the most common): There’s     &nbsp; &nbsp;also water and geothermal power to consider.
+                </div>
+
+            </div>
+
+
+
+</head>
+<body>
+<form name="myForm" action="/calculate" method="post" onsubmit="return validationForm()">
+
+<div class="icon">
+<i class="fas fa-user-circle"></i>
+</div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-25">
+        <label>Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Your name" name="name">
+      </div>
+      <div class="col-50"></div>
+     <div class="col-25">
+        <label>Email:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Your Email" name="email" >
+      </div>
+    </div>
+   <div class="row">
+      <div class="col-25">
+        <label># of People in the house:</label>
+      </div>
+      <div class="col-75">
+         <input type="number" value ="0" placeholder="No of people in the house" name="people" required>
+      </div>
+      <div class="col-50"></div>
+      <div class="col-25">
+        <label>Refrigerator usage (in hr):</label>
+      </div>
+      <div class="col-75">
+         <input type="number" value ="0" step="0.01" placeholder="Enter the usage of refrigerator" name="runtime_refrigerator" required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label>LPG usage (in hr):</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" step="0.01" placeholder="Enter the usage of LPG" name="runtime_lpg" required>
+      </div>
+      <div class="col-50"></div>
+      <div class="col-25">
+        <label>AC usage (in hr):</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" step="0.01" placeholder="Enter the usage of AC" name="runtime_ac" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Entertainment Unit usage (in hr):</label>
+      </div>
+      <div class="col-75">
+         <input type="number" value ="0" step="0.01" placeholder="Enter the usage of Entertainment Unit" name="runtime_entertainmentunit" required>
+      </div>
+      <div class="col-50"></div>
+      <div class="col-25">
+        <label># of People in the vehicle:</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" placeholder="No of people in the vehicle" name="persons" required>
+      </div>   </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Four Wheeler run (in km):</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" step="0.01" placeholder="Enter how much kilometer the car was run " name="run_fourwheeler" required>
+      </div>
+        <div class="col-50"></div>
+    <div class="col-25">
+        <label>Four Wheeler runtime (in hr):</label>
+      </div>
+      <div class="col-75">
+         <input type="number" value ="0" step="0.01" placeholder="Enter how much time the car was run " name="runtime_fourwheeler" required>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label>Two Wheeler run (in km):</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" step="0.01" placeholder="Enter how much kilometer the two-wheeler was run " name="run_twowheeler" required>
+      </div>
+      <div class="col-50"></div>
+      <div class="col-25">
+        <label>Two Wheeler runtime (in hr):</label>
+      </div>
+      <div class="col-75">
+        <input type="number" value ="0" step="0.01" placeholder="Enter how much time the two-wheeler was run " name="runtime_twowheeler" required>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top:20px;padding-right:30px;" >
+      <div class="col-75">
+      	 <input type="submit" value="Calculate" onclick="myFunction('show')"></div>
+      	 <div class="col-75">
+      	  <input type="reset" value="Reset" onclick="myFunction('hide')"></div>
+
+    </div>
+    </div>
+  </form>
+<h1>@Call For Code 2020</h1>
+<script>
+function myFunction(par) {
+  var x = document.getElementById("myDIV");
+
+  if(par=='show'){
+
+      x.style.display = "block";
+
+     }
+   else if(par=='hide'){
+       x.style.display = "none";
+
+
+
+}else
+{    x.style.display = "none";
+
+}
+
+}
+function validationForm(){
+var name = document.forms["myForm"]["name"].value;
+var email = document.forms["myForm"]["email"].value;
+var people = document.forms["myForm"]["people"].value;
+var run_fourwheeler = document.forms["myForm"]["run_fourwheeler"].value;
+var runtime_fourwheeler = document.forms["myForm"]["runtime_fourwheeler"].value;
+var run_twowheeler = document.forms["myForm"]["run_twowheeler"].value;
+var runtime_twowheeler = document.forms["myForm"]["runtime_twowheeler"].value;
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+if ( name==""){
+alert("Name must be filled out");
+return false;
+}
+if ( email==""){
+alert("Email must be filled out");
+return false;
+}
+
+if (reg.test(email) == false)
+{
+    alert('Invalid Email Address');
+    return false;
+}
+if ( people<1){
+alert("No of People should be greater than Zero");
+return false;
+}
+if (run_fourwheeler >0 ){
+if (runtime_fourwheeler <=0 || runtime_fourwheeler==""){
+alert("Please provide Four Wheeler runtime (in hr)");
+    return false;
+}
+}
+
+if (runtime_fourwheeler >0 ){
+if (run_fourwheeler <=0 || run_fourwheeler==""){
+alert("Please provide Four Wheeler run (in km)");
+    return false;
+}
+}
+if (run_twowheeler >0 ){
+if (runtime_twowheeler <=0 || runtime_twowheeler==""){
+alert("Please provide Two Wheeler runtime (in hr)");
+    return false;
+
+}
+}
+
+if (runtime_twowheeler >0 ){
+if (run_twowheeler <=0 || run_twowheeler==""){
+alert("Please provide Two Wheeler run (in km)");
+    return false;
+
+}
+}
+
+
+}
+
+</script>
+    <script>
+      $(document).ready(function() {
+
+       function flyPlane(){
+         plane.css('left', startPos);
+         plane.animate({left: -1200}, 10000, 'linear')
+       };
+
+        var screenWidth = $(document).width();
+        var startPos = screenWidth;
+        var plane = $('#plane')
+        flyPlane();
+        setInterval(function() {
+          flyPlane();
+        }, 10100);
+      });
+    </script>
+<script type="text/javascript">
+function AlertIt() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+</body>
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
